@@ -436,7 +436,7 @@ foreach(hfile ${NEOVIM_HEADERS})
 
   set(tsource "${GENERATED_DIR}/${r}.test-include.c")
   set(tresult "${GENERATED_DIR}/${r}.test-include.i")
-  string(REPLACE "/" "-" texe "${r}-test-issue-5321")
+  string(REPLACE "/" "-" texe "${r}-test")
   write_file("${tsource}" "#include \"${hfile}\"\nint main(int argc, char **argv) { return 0; }")
   get_preproc_output(PREPROC_OUTPUT ${tresult})
   add_executable(${texe} EXCLUDE_FROM_ALL ${tsource})
