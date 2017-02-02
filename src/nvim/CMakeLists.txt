@@ -439,6 +439,8 @@ foreach(hfile ${NEOVIM_HEADERS})
   string(REPLACE "/" "-" texe "${r}-test")
   write_file("${tsource}" "#include \"${hfile}\"\nint main(int argc, char **argv) { return 0; }")
   get_preproc_output(PREPROC_OUTPUT ${tresult})
+  message(${texe})
+  message(${tsource})
   add_executable(${texe} EXCLUDE_FROM_ALL ${tsource})
 
   list(FIND NO_SINGLE_CHECK_HEADERS "${r}" hfile_exclude_idx)
