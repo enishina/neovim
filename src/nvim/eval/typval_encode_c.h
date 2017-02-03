@@ -1,4 +1,4 @@
-/// @file eval/typval_encode.c.h
+/// @file eval/typval_encode_c.h
 ///
 /// Contains set of macros used to convert (possibly recursive) typval_T into
 /// something else. For these macros to work the following macros must be
