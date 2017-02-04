@@ -2497,18 +2497,22 @@ static void redir_write(char_u *str, int maxlen)
 
     /* Write and adjust the current column. */
     while (*s != NUL && (maxlen < 0 || (int)(s - str) < maxlen)) {
-      if (!redir_reg && !redir_vname && !capture_ga)
-        if (redir_fd != NULL)
+      if (!redir_reg && !redir_vname && !capture_ga) {
+        if (redir_fd != NULL) {
           putc(*s, redir_fd);
-      if (verbose_fd != NULL)
+        }
+      }
+      if (verbose_fd != NULL) {
         putc(*s, verbose_fd);
-      if (*s == '\r' || *s == '\n')
+      }
+      if (*s == '\r' || *s == '\n') {
         cur_col = 0;
-      else if (*s == '\t')
+      } else if (*s == '\t') {
         cur_col += (8 - cur_col % 8);
-      else
-        ++cur_col;
-      ++s;
+      } else {
+        cur_col++;
+      }
+      s++;
     }
 
     if (msg_silent != 0)        /* should update msg_col */
