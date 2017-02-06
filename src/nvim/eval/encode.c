@@ -477,7 +477,7 @@ int encode_read_from_list(ListReaderState *const state, char *const buf,
 #define TYPVAL_ENCODE_NAME echo
 #define TYPVAL_ENCODE_FIRST_ARG_TYPE garray_T *const
 #define TYPVAL_ENCODE_FIRST_ARG_NAME gap
-#include "nvim/eval/typval_encode_c.h"
+// #include "nvim/eval/typval_encode_c.h"
 #undef TYPVAL_ENCODE_SCOPE
 #undef TYPVAL_ENCODE_NAME
 #undef TYPVAL_ENCODE_FIRST_ARG_TYPE
@@ -776,7 +776,7 @@ bool encode_check_json_key(const typval_T *const tv)
 #define TYPVAL_ENCODE_NAME json
 #define TYPVAL_ENCODE_FIRST_ARG_TYPE garray_T *const
 #define TYPVAL_ENCODE_FIRST_ARG_NAME gap
-#include "nvim/eval/typval_encode_c.h"
+// #include "nvim/eval/typval_encode_c.h"
 #undef TYPVAL_ENCODE_SCOPE
 #undef TYPVAL_ENCODE_NAME
 #undef TYPVAL_ENCODE_FIRST_ARG_TYPE
@@ -987,7 +987,7 @@ char *encode_tv2json(typval_T *tv, size_t *len)
 #define TYPVAL_ENCODE_NAME msgpack
 #define TYPVAL_ENCODE_FIRST_ARG_TYPE msgpack_packer *const
 #define TYPVAL_ENCODE_FIRST_ARG_NAME packer
-#include "nvim/eval/typval_encode_c.h"
+// #include "nvim/eval/typval_encode_c.h"
 #undef TYPVAL_ENCODE_SCOPE
 #undef TYPVAL_ENCODE_NAME
 #undef TYPVAL_ENCODE_FIRST_ARG_TYPE
