@@ -1,6 +1,6 @@
 /// @file eval/typval_encode.h
 ///
-/// Contains common definitions for eval/typval_encode_c.h. Most of time should
+/// Contains common definitions for eval/typval_encode.c.h. Most of time should
 /// not be included directly.
 #ifndef NVIM_EVAL_TYPVAL_ENCODE_H
 #define NVIM_EVAL_TYPVAL_ENCODE_H
