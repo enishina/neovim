@@ -486,7 +486,7 @@ static inline void typval_encode_dict_end(EncodedData *const edata)
 #define TYPVAL_ENCODE_NAME object
 #define TYPVAL_ENCODE_FIRST_ARG_TYPE EncodedData *const
 #define TYPVAL_ENCODE_FIRST_ARG_NAME edata
-#include "nvim/eval/typval_encode_c.h"
+#include "nvim/eval/typval_encode.c.h"
 #undef TYPVAL_ENCODE_SCOPE
 #undef TYPVAL_ENCODE_NAME
 #undef TYPVAL_ENCODE_FIRST_ARG_TYPE
