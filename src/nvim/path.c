@@ -995,12 +995,12 @@ static void uniquefy_paths(garray_T *gap, char_u *pattern)
     ga_remove_duplicate_strings(gap);
 }
 
-/*
- * Return the end of the directory name, on the first path
- * separator:
- * "/path/file", "/path/dir/", "/path//dir", "/file"
- *	 ^	       ^	     ^	      ^
- */
+// 
+// Return the end of the directory name, on the first path
+// separator:
+// "/path/file", "/path/dir/", "/path//dir", "/file"
+//   ^	       ^	     ^	      ^
+// 
 char_u *gettail_dir(const char_u *fname)
 {
   const char_u      *dir_end = fname;

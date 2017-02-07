@@ -240,7 +240,7 @@ int main(int argc, char **argv)
 
   // Get the name with which Nvim was invoked, with and without path.
   set_vim_var_string(VV_PROGPATH, argv[0], -1);
-  set_vim_var_string(VV_PROGNAME, (char *) path_tail((char_u *) argv[0]), -1);
+  set_vim_var_string(VV_PROGNAME, (char *)path_tail((char_u *) argv[0]), -1);
 
   event_init();
   /*
@@ -1194,9 +1194,9 @@ static void check_and_set_isatty(mparm_T *paramp)
   paramp->err_isatty = os_isatty(fileno(stderr));
   TIME_MSG("window checked");
 }
-/*
- * Get filename from command line, given that there is one.
- */
+// 
+// Get filename from command line, given that there is one.
+// 
 static char_u *get_fname(mparm_T *parmp, char_u *cwd)
 {
 #if !defined(UNIX)
