@@ -423,14 +423,13 @@ set(NO_SINGLE_CHECK_HEADERS
   version
   window
 )
-set_property(GLOBAL PROPERTY ALLOW_DUPLICATE_CUSTOM_TARGETS 1)
 foreach(hfile ${NEOVIM_HEADERS})
   get_filename_component(full_d ${hfile} PATH)
   file(RELATIVE_PATH d "${PROJECT_SOURCE_DIR}/src/nvim" "${full_d}")
   if(${d} MATCHES "^[.][.]")
     file(RELATIVE_PATH d "${GENERATED_DIR}" "${full_d}")
   endif()
-  get_filename_component(r ${hfile} NAME_WE)
+  string(REGEX REPLACE [[(.+)\.[^.]+]] [[\1]] r ${hfile})
   if(NOT ${d} EQUAL ".")
     set(r "${d}/${r}")
   endif()
