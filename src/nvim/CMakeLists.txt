@@ -423,7 +423,6 @@ set(NO_SINGLE_CHECK_HEADERS
   version
   window
 )
-set_property(GLOBAL PROPERTY ALLOW_DUPLICATE_CUSTOM_TARGETS 1)
 foreach(hfile ${NEOVIM_HEADERS})
   get_filename_component(full_d ${hfile} PATH)
   file(RELATIVE_PATH d "${PROJECT_SOURCE_DIR}/src/nvim" "${full_d}")
