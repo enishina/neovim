@@ -3,7 +3,6 @@
 
 #include <stddef.h>
 #include <stdbool.h>
-#include <stddef.h>
 #include <stdarg.h>
 
 #include "nvim/types.h"
